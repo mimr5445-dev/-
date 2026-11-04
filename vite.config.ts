@@ -8,6 +8,8 @@ export default defineConfig(({ mode }) => {
       server: {
         port: 3000,
         host: '0.0.0.0',
+        // Allow proxied preview hosts (e.g. *.e2b.app) to reach the dev server
+        allowedHosts: true,
       },
       plugins: [react()],
       define: {
